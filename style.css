@@ -1,0 +1,107 @@
+/* Login Box */
+#loginBox{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  background:#111;
+  padding:30px;
+  border-radius:15px;
+  text-align:center;
+  box-shadow:0 0 20px #ff4d88;
+}
+
+#loginBox h2{
+  color:#ff4d88;
+  margin-bottom:15px;
+}
+
+#loginBox input{
+  display:block;
+  margin:10px auto;
+  padding:10px;
+  width:200px;
+  border:none;
+  border-radius:8px;
+}
+
+#loginBox button{
+  padding:10px 20px;
+  border:none;
+  border-radius:8px;
+  background:#ff4d88;
+  color:white;
+  cursor:pointer;
+}
+
+#error{
+  color:red;
+  margin-top:10px;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  background: radial-gradient(circle,#1a0033,#000);
+  overflow:hidden;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  height:100vh;
+}
+
+canvas{
+  width:90vw;
+  max-width:500px;
+}
+
+.title{
+  position:absolute;
+  top:50px;
+  width:100%;
+  text-align:center-laft;
+  color:#ff4d88;
+  font-size:40px;
+  text-shadow:0 0 15px #ff4d88;
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow{
+  from{ text-shadow:0 0 10px #ff4d88; }
+  to{ text-shadow:0 0 30px #ff99bb; }
+}
+
+/* القطط */
+.cat{
+  position:absolute;
+  bottom:10px;
+  width:100px;
+  pointer-events:none;
+}
+
+.left{
+  left:10px;
+  animation: float 2s ease-in-out infinite;
+}
+
+.right{
+  right:10px;
+  animation: floatRight 2s ease-in-out infinite;
+}
+
+@keyframes float{
+  0%{ transform: translateY(0); }
+  50%{ transform: translateY(-10px); }
+  100%{ transform: translateY(0); }
+}
+
+@keyframes floatRight{
+  0%{ transform: scaleX(-1) translateY(0); }
+  50%{ transform: scaleX(-1) translateY(-10px); }
+  100%{ transform: scaleX(-1) translateY(0); }
+}
